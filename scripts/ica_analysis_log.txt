@@ -1,0 +1,116 @@
+
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------
+
+ICA Analysis on cleaned_subject1_raw.fif
+Number of components: 15
+Identified artifacts: None detected
+----------------------

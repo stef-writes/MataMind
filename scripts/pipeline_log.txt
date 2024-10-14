@@ -1,0 +1,201 @@
+2024-10-13 16:43:33,050 - INFO - Current working directory: /Users/nooz/MetaViz/MataMind/scripts
+2024-10-13 16:43:33,050 - INFO - Pipeline execution started.
+2024-10-13 16:43:33,050 - INFO - --- Start running script: ./load_and_preprocess.py ---
+2024-10-13 16:43:33,894 - INFO - 
+Loading data from: /Users/nooz/MetaViz/MataMind/scripts/physionet.org/files/eegmmidb/1.0.0/S001/S001R03.edf
+Extracting EDF parameters from /Users/nooz/MetaViz/MataMind/scripts/physionet.org/files/eegmmidb/1.0.0/S001/S001R03.edf...
+EDF file detected
+Setting channel info structure...
+Creating raw.info structure...
+Reading 0 ... 19999  =      0.000 ...   124.994 secs...
+
+Basic Info of the Loaded Data:
+<Info | 8 non-empty values
+ bads: []
+ ch_names: Fc5., Fc3., Fc1., Fcz., Fc2., Fc4., Fc6., C5.., C3.., C1.., ...
+ chs: 64 EEG
+ custom_ref_applied: False
+ highpass: 0.0 Hz
+ lowpass: 80.0 Hz
+ meas_date: 2009-08-12 16:15:00 UTC
+ nchan: 64
+ projs: []
+ sfreq: 160.0 Hz
+ subject_info: 3 items (dict)
+>
+
+Applying bandpass filter (1-50 Hz)...
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 50 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 1.00
+- Lower transition bandwidth: 1.00 Hz (-6 dB cutoff frequency: 0.50 Hz)
+- Upper passband edge: 50.00 Hz
+- Upper transition bandwidth: 12.50 Hz (-6 dB cutoff frequency: 56.25 Hz)
+- Filter length: 529 samples (3.306 s)
+
+
+Detecting bad channels...
+Bad channels detected: []
+
+Plotting Raw EEG Data...
+Using matplotlib as 2D backend.
+
+Saving preprocessed data to /Users/nooz/MetaViz/MataMind/scripts/S001R03_filtered_raw.fif...
+Overwriting existing file.
+Writing /Users/nooz/MetaViz/MataMind/scripts/S001R03_filtered_raw.fif
+Closing /Users/nooz/MetaViz/MataMind/scripts/S001R03_filtered_raw.fif
+[done]
+
+Preprocessing complete. Data saved.
+Channels marked as bad:
+none
+
+2024-10-13 16:43:33,894 - INFO - --- Finished running script: ./load_and_preprocess.py in 0.84 seconds ---
+2024-10-13 16:43:33,894 - INFO - --- Start running script: ./extract_epochs.py ---
+2024-10-13 16:43:34,616 - INFO - Extracting EDF parameters from /Users/nooz/MetaViz/MataMind/scripts/physionet.org/files/eegmmidb/1.0.0/S001/S001R03.edf...
+EDF file detected
+Setting channel info structure...
+Creating raw.info structure...
+Reading 0 ... 19999  =      0.000 ...   124.994 secs...
+Used Annotations descriptions: [np.str_('T0'), np.str_('T1'), np.str_('T2')]
+Task Info for this run: T1 = left fist, T2 = right fist
+Not setting metadata
+15 matching events found
+Setting baseline interval to [-0.2, 0.0] s
+Applying baseline correction (mode: mean)
+0 projection items activated
+Using data from preloaded Raw for 15 events and 193 original time points ...
+0 bad epochs dropped
+Adding metadata with 1 columns
+Number of epochs for left fist: 8
+Number of epochs for right fist: 7
+
+Saving epochs to /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif...
+Overwriting existing file.
+Overwriting existing file.
+Epoch extraction complete with run-based task segmentation.
+
+2024-10-13 16:43:34,616 - INFO - --- Finished running script: ./extract_epochs.py in 0.72 seconds ---
+2024-10-13 16:43:34,616 - INFO - --- Start running script: ./ica_analysis.py ---
+2024-10-13 16:43:38,117 - INFO - Files in directory: ['load_and_preprocess.py', 'DataVal.py', 'main_pipeline_runner.py', '.DS_Store', 'config.py', 'ica_analysis_log.txt', 'output', 'S001R03_left fist_right fist_epochs-epo_psd_plot.png', 'erp_analysis.py', 'data_exploration.py', '__pycache__', 'cleaned_subject_raw.fif', 'allfiles.txt', 'convert_fif_to_edf.py', 'psd_analysis.py', 'visualizations.py', 'ica_analysis.py', 'convert_to_npy.py', 'source_localization.py', 'connectivity_visualization.py', 'utils.py', 'view_epochs.py', 'figures', '.gitattributes', 'S001R03_left fist_right fist_epochs-epo.fif', 'connect_and_source.py', 'physionet.org', 'S001R03_filtered_raw.fif', 'pipeline_log.txt', 'annotations.py', 'extract_epochs.py']
+Filtered epochs files: ['S001R03_left fist_right fist_epochs-epo.fif']
+Latest epochs file found: /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif
+Loading filtered EEG epochs from /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif...
+Reading /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif ...
+Isotrak not found
+    Found the data of interest:
+        t =    -200.00 ...    1000.00 ms
+        0 CTF compensation matrices available
+Adding metadata with 1 columns
+15 matching events found
+No baseline correction applied
+0 projection items activated
+
+Channel Info after loading epochs: ['Fc5.', 'Fc3.', 'Fc1.', 'Fcz.', 'Fc2.', 'Fc4.', 'Fc6.', 'C5..', 'C3..', 'C1..', 'Cz..', 'C2..', 'C4..', 'C6..', 'Cp5.', 'Cp3.', 'Cp1.', 'Cpz.', 'Cp2.', 'Cp4.', 'Cp6.', 'Fp1.', 'Fpz.', 'Fp2.', 'Af7.', 'Af3.', 'Afz.', 'Af4.', 'Af8.', 'F7..', 'F5..', 'F3..', 'F1..', 'Fz..', 'F2..', 'F4..', 'F6..', 'F8..', 'Ft7.', 'Ft8.', 'T7..', 'T8..', 'T9..', 'T10.', 'Tp7.', 'Tp8.', 'P7..', 'P5..', 'P3..', 'P1..', 'Pz..', 'P2..', 'P4..', 'P6..', 'P8..', 'Po7.', 'Po3.', 'Poz.', 'Po4.', 'Po8.', 'O1..', 'Oz..', 'O2..', 'Iz..']
+Applying ICA for artifact analysis...
+Fitting ICA to data using 64 channels (please be patient, this may take a while)
+Selecting by number: 15 components
+Fitting ICA took 0.1s.
+Attempting to automatically identify artifacts...
+No EOG channels found: No EOG channel(s) found. Using power-based artifact detection.
+    Using multitaper spectrum estimation with 7 DPSS windows
+Components with high power in low-frequency range: []
+No significant artifacts detected. The data appears clean.
+Applying ICA to remove artifacts (if any)...
+Applying ICA to Epochs instance
+    Transforming to ICA space (15 components)
+    Zeroing out 0 ICA components
+    Projecting back using 64 PCA components
+Plotting cleaned EEG data...
+Using matplotlib as 2D backend.
+Dropped 0 epochs: 
+The following epochs were marked as bad and are dropped:
+[]
+Channels marked as bad:
+none
+Saving cleaned EEG data to /Users/nooz/MetaViz/MataMind/scripts/cleaned_subject_raw.fif...
+Overwriting existing file.
+Overwriting existing file.
+ICA analysis and data cleaning complete.
+ICA analysis, artifact removal, and visualization of cleaned EEG complete.
+
+2024-10-13 16:43:38,118 - INFO - --- Finished running script: ./ica_analysis.py in 3.50 seconds ---
+2024-10-13 16:43:38,118 - INFO - --- Start running script: ./erp_analysis.py ---
+2024-10-13 16:43:42,336 - INFO - Loading cleaned epochs data from /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif...
+Reading /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif ...
+Isotrak not found
+    Found the data of interest:
+        t =    -200.00 ...    1000.00 ms
+        0 CTF compensation matrices available
+Adding metadata with 1 columns
+15 matching events found
+No baseline correction applied
+0 projection items activated
+Channel names have been standardized to match the montage.
+Montage successfully applied for channel locations.
+Event IDs: {'T1': 2, 'T2': 3}
+Number of epochs for Right_Hand: 8
+Number of epochs for Left_Hand: 7
+Plotting butterfly plots for motor imagery tasks...
+Plotting butterfly plot for condition: Right_Hand
+Plotting butterfly plot for condition: Left_Hand
+Plotting ERP comparison for motor imagery tasks...
+combining channels using GFP (eeg channels)
+combining channels using GFP (eeg channels)
+ERP analysis complete.
+
+2024-10-13 16:43:42,337 - INFO - --- Finished running script: ./erp_analysis.py in 4.22 seconds ---
+2024-10-13 16:43:42,337 - INFO - --- Start running script: ./psd_analysis.py ---
+2024-10-13 16:43:44,771 - INFO - Loading cleaned EEG data from /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif...
+Reading /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif ...
+Isotrak not found
+    Found the data of interest:
+        t =    -200.00 ...    1000.00 ms
+        0 CTF compensation matrices available
+Adding metadata with 1 columns
+15 matching events found
+No baseline correction applied
+0 projection items activated
+Using all channels for analysis.
+Calculating Power Spectral Density (PSD) using multitaper method...
+    Using multitaper spectrum estimation with 7 DPSS windows
+PSD plot saved as S001R03_left fist_right fist_epochs-epo_psd_plot.png
+PSD analysis complete.
+
+2024-10-13 16:43:44,771 - INFO - --- Finished running script: ./psd_analysis.py in 2.43 seconds ---
+2024-10-13 16:43:44,771 - INFO - --- Start running script: ./visualizations.py ---
+2024-10-13 16:43:48,820 - INFO - Loading epochs data from /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif...
+Reading /Users/nooz/MetaViz/MataMind/scripts/S001R03_left fist_right fist_epochs-epo.fif ...
+Isotrak not found
+    Found the data of interest:
+        t =    -200.00 ...    1000.00 ms
+        0 CTF compensation matrices available
+Adding metadata with 1 columns
+15 matching events found
+No baseline correction applied
+0 projection items activated
+Channel names have been standardized to match the montage.
+Generating heatmap of EEG channel activity...
+Figure saved as figures/heatmap_channel_activity.png
+Plotting butterfly plot of all channels...
+Figure saved as figures/butterfly_plot_with_gfp.png
+Generating topographic maps at specific time points...
+NOTE: pick_channels() is a legacy function. New code should use inst.pick(...).
+Figure saved as figures/topographic_maps.png
+Visualizations complete.
+
+2024-10-13 16:43:48,820 - INFO - --- Finished running script: ./visualizations.py in 4.05 seconds ---
+2024-10-13 16:43:48,820 - INFO - --- Start running script: ./source_localization.py ---
+2024-10-13 16:43:49,786 - INFO - Loading cleaned EEG data from /Users/nooz/MetaViz/MataMind/scripts/physionet.org/files/eegmmidb/1.0.0/S001/S001R03.edf...
+Opening raw data file /Users/nooz/MetaViz/MataMind/scripts/physionet.org/files/eegmmidb/1.0.0/S001/S001R03.edf...
+Error loading raw file: file '/Users/nooz/MetaViz/MataMind/scripts/physionet.org/files/eegmmidb/1.0.0/S001/S001R03.edf' does not start with a file id tag
+
+2024-10-13 16:43:49,786 - INFO - --- Finished running script: ./source_localization.py in 0.97 seconds ---
+2024-10-13 16:43:50,373 - INFO - Pipeline executed successfully.
+2024-10-13 16:43:50,373 - INFO - Total pipeline execution time: 0:00:17.323297
